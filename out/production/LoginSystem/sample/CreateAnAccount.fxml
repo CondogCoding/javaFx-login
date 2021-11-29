@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+      prefWidth="600.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="sample.AccountHandler">
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0">
+            <center>
+                <Label text="Create an Account" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font size="38.0"/>
+                    </font>
+                </Label>
+            </center>
+        </BorderPane>
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <TextField fx:id="Nametxt" GridPane.columnIndex="1"/>
+                <TextField fx:id="Passtxt" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <center>
+                        <Button fx:id="Createbtn" mnemonicParsing="false" onAction="#createBtnHandler" text="Create"
+                                BorderPane.alignment="CENTER"/>
+                    </center>
+                </BorderPane>
+                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                    <right>
+                        <Label text="Username" BorderPane.alignment="CENTER"/>
+                    </right>
+                </BorderPane>
+                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                    <right>
+                        <Label text="Password" BorderPane.alignment="CENTER"/>
+                    </right>
+                </BorderPane>
+                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+            </children>
+        </GridPane>
+    </children>
+</VBox>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+      prefWidth="600.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="sample.LoginController">
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0">
+            <center>
+                <Label text="Login" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font size="38.0"/>
+                    </font>
+                </Label>
+            </center>
+            <left>
+                <ImageView fx:id="pic1" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"
+                           BorderPane.alignment="CENTER">
+                <image>
+                    <Image url="@pic1.jpg"/>
+                </image>
+                </ImageView>
+
+            </left>
+            <right>
+                <ImageView fx:id="pic2" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"
+                           BorderPane.alignment="CENTER">
+                    <image>
+                        <Image url="@pic2.jpg"/>
+                    </image>
+                </ImageView>
+            </right>
+        </BorderPane>
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <TextField fx:id="Nametxt" GridPane.columnIndex="1"/>
+                <TextField fx:id="Passtxt" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <center>
+                        <Button fx:id="Loginbtn" mnemonicParsing="false" onAction="#loginBtnHandler" text="Login"
+                                BorderPane.alignment="CENTER"/>
+                    </center>
+                </BorderPane>
+                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                    <right>
+                        <Label text="Username" BorderPane.alignment="CENTER"/>
+                    </right>
+                </BorderPane>
+                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                    <right>
+                        <Label text="Password" BorderPane.alignment="CENTER"/>
+                    </right>
+                </BorderPane>
+                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <center>
+                        <Hyperlink fx:id="Createlnk" onAction="#createAccountHandler" text="Create an Account"
+                                   BorderPane.alignment="CENTER"/>
+                    </center>
+                </BorderPane>
+            </children>
+        </GridPane>
+    </children>
+</VBox>
